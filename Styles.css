@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(145deg, #f0f7ff, #ffe5e9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #444;
+}
+
+.weather-app {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-app:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #007b92;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #7c9dff;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    margin-bottom: 12px;
+    background-color: #f9fbff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #5671ff;
+    background-color: #f0f5ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7c8a;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff5967;
+    transform: scale(1.05);
+}
+
+.weather-info {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.weather-info.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.weather-info p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+.weather-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
+}
+
+#error-message {
+    color: #ff4f5e;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weather-app {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+
+    .weather-info p {
+        font-size: 1rem;
+    }
+}
